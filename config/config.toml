@@ -1,0 +1,19 @@
+[llm]
+model = "Qwen/Qwen2.5-7B-Instruct"
+base_url = "https://api.siliconflow.cn/v1"
+api_key = "sk-kkgktfqcykfklfghmrywsypvidvkwfuheaazbquzscdoflzy"
+max_tokens = 4096
+temperature = 0.0
+
+#[llm-1]
+#model = "moonshot-v1-8K"
+#base_url = "https://api.moonshot.cn/v1" 
+#api_key = "sk-HrNo6izW0Vv56C1ZecAliA0rqfXUW6SUk7m2f1eXGv5ki64M"
+#max_tokens = 4096
+#temperature = 0.0
+
+# Optional configuration for specific LLM models
+[llm.vision]
+model = "Qwen/Qwen2.5-7B-Instruct"
+base_url = "https://api.siliconflow.cn/v1"
+api_key = "sk-kkgktfqcykfklfghmrywsypvidvkwfuheaazbquzscdoflzy"
