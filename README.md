@@ -17,7 +17,7 @@
 ｜<a href="#On Going"> On Going </a>
 ｜<a href="#Install"> Install </a>
 ｜<a href="#Usage"> Usage </a>
-｜<a href="#Community"> Community </a>
+｜<a href="#Community"> Community </ a>
 </h4>
 </div>
 
@@ -87,85 +87,4 @@ sed -i 's/none/read,write/g' /etc/ImageMagick-6/policy.xml
 - On MacOS
 ```shell
 brew install imagemagick
-sed -i 's/none/read,write/g' /usr/local/Cellar/imagemagick/7.1.1-8_1/etc/ImageMagick-7/policy.xml 
-```
-- On Windows
-
-Download and install imagemagick https://imagemagick.org/script/download.php#windows
-
-Find your python install path and change the `IMAGEMAGICK_BINARY` to your imagemagick install path in file `site-packages\moviepy\config_defaults.py`
-
-2. Download font file to funclip/font
-
-```shell
-wget https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ClipVideo/STHeitiMedium.ttc -O font/STHeitiMedium.ttc
-```
-<a name="Usage"></a>
-## Use FunClip
-
-### A. Use FunClip as local Gradio Service
-You can establish your own FunClip service which is same as [Modelscope Space](https://modelscope.cn/studios/iic/funasr_app_clipvideo/summary) as follow:
-```shell
-python funclip/launch.py
-# '-l en' for English audio recognize
-# '-p xxx' for setting port number
-# '-s True' for establishing service for public accessing
-```
-then visit ```localhost:7860``` you will get a Gradio service like below and you can use FunClip following the steps:
-
-- Step1: Upload your video file (or try the example videos below)
-- Step2: Copy the text segments you need to 'Text to Clip'
-- Step3: Adjust subtitle settings (if needed)
-- Step4: Click 'Clip' or 'Clip and Generate Subtitles'
-
-<img src="docs/images/guide.jpg"/>
-
-Follow the guide below to explore LLM based clipping:
-
-<img src="docs/images/LLM_guide.png" width=360/>
-
-### B. Experience FunClip in Modelscope
-
-[FunClip@Modelscope Space⭐](https://modelscope.cn/studios/iic/funasr_app_clipvideo/summary)
-
-[FunClip@HuggingFace Space🤗](https://huggingface.co/spaces/R1ckShi/FunClip)
-
-### C. Use FunClip in command line
-
-FunClip supports you to recognize and clip with commands:
-```shell
-# step1: Recognize
-python funclip/videoclipper.py --stage 1 \
-                       --file examples/2022云栖大会_片段.mp4 \
-                       --output_dir ./output
-# now you can find recognition results and entire SRT file in ./output/
-# step2: Clip
-python funclip/videoclipper.py --stage 2 \
-                       --file examples/2022云栖大会_片段.mp4 \
-                       --output_dir ./output \
-                       --dest_text '我们把它跟乡村振兴去结合起来，利用我们的设计的能力' \
-                       --start_ost 0 \
-                       --end_ost 100 \
-                       --output_file './output/res.mp4'
-```
-
-<a name="Community"></a>
-## Community Communication🍟
-
-FunClip is firstly open-sourced bu FunASR team, any useful PR is welcomed.
-
-You can also scan the following DingTalk group or WeChat group QR code to join the community group for communication.
-
-|                           DingTalk group                            |                     WeChat group                      |
-|:-------------------------------------------------------------------:|:-----------------------------------------------------:|
-| <div align="left"><img src="docs/images/dingding.png" width="250"/> | <img src="docs/images/wechat.png" width="215"/></div> |
-
-## Find Speech Models in FunASR
-
-[FunASR](https://github.com/alibaba-damo-academy/FunASR) hopes to build a bridge between academic research and industrial applications on speech recognition. By supporting the training & finetuning of the industrial-grade speech recognition model released on ModelScope, researchers and developers can conduct research and production of speech recognition models more conveniently, and promote the development of speech recognition ecology. ASR for Fun！
-
-📚FunASR Paper: <a href="https://arxiv.org/abs/2305.11013"><img src="https://img.shields.io/badge/Arxiv-2305.11013-orange"></a> 
-
-📚SeACo-Paraformer Paper: <a href="https://arxiv.org/abs/2308.03266"><img src="https://img.shields.io/badge/Arxiv-2308.03266-orange"></a>
-
-🌟Support FunASR: <a href='https://github.com/alibaba-damo-academy/FunASR/stargazers'><img src='https://img.shields.io/github/stars/alibaba-damo-academy/FunASR.svg?style=social'></a>
+sed -i 's/none/read,write/g]
